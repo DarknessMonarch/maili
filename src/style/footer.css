@@ -1,0 +1,51 @@
+@media screen {
+  .footer-container {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-link-container {
+    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-link {
+    font-size: .8rem; 
+    color: var(--primary-light);
+  }
+
+  .router-link-active {
+    color: var(--secondary-color);
+  }
+
+  .router-link-exact-active {
+    color: var(--secondary-color);
+  }
+
+  .footer-info {
+    font-size: .8rem;
+
+  }
+}
+
+/* using it as global style for larger devices  */
+@media only screen and (min-width: 48em) {
+}
+
+/* ipad pro screens & laptop */
+@media only screen and (min-width: 49em) and (max-width: 64em) {
+}
+
+/* large screens : Desktop and 4k screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+}
+
+/* 5k screens and above */
+@media only screen and (min-width: 91em) {
+}

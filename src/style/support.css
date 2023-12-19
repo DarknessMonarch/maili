@@ -1,0 +1,48 @@
+@media screen {
+  .support-container {
+    gap: 10px;
+    height: 80%;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  .support-container p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .support-container ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .support-container ul li {
+    font-size: .9rem;
+
+  }
+
+
+}
+
+/* using it as global style for larger devices  */
+@media only screen and (min-width: 48em) {
+}
+
+/* ipad pro screens & laptop */
+@media only screen and (min-width: 49em) and (max-width: 64em) {
+}
+
+/* large screens : Desktop and 4k screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+}
+
+/* 5k screens and above */
+@media only screen and (min-width: 91em) {
+}

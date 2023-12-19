@@ -1,0 +1,50 @@
+@media screen {
+.policy-container {
+  gap: 20px;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.policy-container h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+
+.policy-container h2 {
+  font-size: .8rem;
+  font-weight: 600;
+  
+}
+
+.policy-section {
+  gap: 6px;
+  display: flex;
+  flex-direction: column;
+}
+
+.policy-section p {
+  font-size: .8rem;
+}
+
+
+}
+
+/* using it as global style for larger devices  */
+@media only screen and (min-width: 48em) {
+}
+
+/* ipad pro screens & laptop */
+@media only screen and (min-width: 49em) and (max-width: 64em) {
+}
+
+/* large screens : Desktop and 4k screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+}
+
+/* 5k screens and above */
+@media only screen and (min-width: 91em) {
+}
