@@ -161,7 +161,7 @@ const attachFile = () => {
           <div class="home-bottom-area">
             <h1>From</h1>
             <div class="home-area-inner">
-              <span>globalassignmenthelp2@gmail.com</span>
+              <span>Contact@sportypredict.com</span>
               <span>Cc Bcc</span>
             </div>
           </div>

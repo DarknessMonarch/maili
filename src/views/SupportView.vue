@@ -7,8 +7,8 @@
     </p>
     <p>Contact us at:</p>
     <ul>
-      <li>Email: globalassignmenthelp2@gmail.com</li>
-      <li>Phone: +254720905789</li>
+      <li>Email: Contact@sportypredict.com</li>
+      <li>Phone: +254706272207</li>
     </ul>
   </div>
 </template>
