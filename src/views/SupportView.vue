@@ -8,7 +8,7 @@
     <p>Contact us at:</p>
     <ul>
       <li>Email: Contact@sportypredict.com</li>
-      <li>Phone: +254706272207</li>
+      <li>Phone: +254703147237</li>
     </ul>
   </div>
 </template>
