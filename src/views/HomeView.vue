@@ -23,19 +23,18 @@ const SERVER_HOST = import.meta.env.VITE_SERVER_HOST
 const postEmail = async () => {
   if (!emails.value.length || !subject.value || !message.value) {
     toast.error('Please enter all required fields')
+    console.log(emails.value, subject.value, message.value)
+
     return
   }
 
   try {
-    const formattedMessage = formatMessage(message.value)
-    const formattedSubject = formatSubject(subject.value)
-
     const response = await axios.post(
       `${SERVER_HOST}/send-email/`,
       {
         email: emails.value,
-        subject: formattedSubject,
-        text: formattedMessage
+        subject: subject.value,
+        text: message.value
       },
       {
         headers: {
@@ -58,7 +57,6 @@ const removeEmail = (emailToRemove) => {
     emails.value.splice(indexToRemove, 1)
   }
 }
-
 const addEmail = () => {
   const re =
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -82,11 +80,9 @@ const addEmail = () => {
 const textBold = () => {
   style.value = 'bold'
 }
-
 const textItalic = () => {
   style.value = 'italic'
 }
-
 const textUnderline = () => {
   style.value = 'underline'
 }
@@ -143,25 +139,6 @@ const attachFile = () => {
       textarea.focus()
     }
   })
-}
-
-const formatSubject = (subject) => {
-  return `[${style.value}] ${subject}`
-}
-
-const formatMessage = (message) => {
-  let formattedMessage = message
-
-  formattedMessage = formattedMessage.replace(/\n\n/g, '\n\n\n')
-
-  formattedMessage = formattedMessage.replace(/^\s*-\s/gm, '- ')
-
-  formattedMessage = formattedMessage.replace(/^\s*\d+\.\s/gm, (match) => {
-    const number = match.match(/\d+/)[0]
-    return `${number}. `
-  })
-
-  return formattedMessage
 }
 </script>
 
@@ -247,19 +224,6 @@ const formatMessage = (message) => {
     <Footer />
   </div>
 </template>
-
 <style scoped>
 @import '@/style/home.css';
-
-.home-bottom-textarea--bold {
-  font-weight: bold;
-}
-
-.home-bottom-textarea--italic {
-  font-style: italic;
-}
-
-.home-bottom-textarea--underline {
-  text-decoration: underline;
-}
 </style>
